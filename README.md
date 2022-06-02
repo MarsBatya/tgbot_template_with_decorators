@@ -8,16 +8,18 @@ how to use:
 
 `cd tgbot_template_with_decorators`
 
+`python3 -m pip install -r requirements.txt`
+
 `cp bot.ini.example bot.ini`
 
 
  change bot.ini values appropriately
  
- change the create_pool for your needs
+ change create_pool() in bot.py for your needs
 
 
-`python bot.py`
+`python3 bot.py`
 
 
-if you wanna play with the code generation tool, u can run it w/ `python -m tgbot.wrappers.main`
+if you wanna play with the code generation tool, u can run it w/ `python3 -m tgbot.wrappers.main`
 
