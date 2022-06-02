@@ -7,8 +7,8 @@ from aiogram.contrib.fsm_storage.redis import RedisStorage
 
 from tgbot.config import load_config
 from tgbot.filters.role import RoleFilter, AdminFilter
-from tgbot.handlers.admin import register_admin
-from tgbot.handlers.user import register_user
+from tgbot.handlers import admin
+from tgbot.handlers import user
 from tgbot.middlewares.db import DbMiddleware
 from tgbot.middlewares.role import RoleMiddleware
 
@@ -46,8 +46,8 @@ async def main():
     dp.filters_factory.bind(RoleFilter)
     dp.filters_factory.bind(AdminFilter)
 
-    register_admin(dp)
-    register_user(dp)
+    for handler in (admin, user):
+        handler.gather(dp, verbose=True)
 
     # start
     try:
