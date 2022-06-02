@@ -1,4 +1,4 @@
-"a generated file for copying aiogram.Dispatcher wrappers"
+"a generated file for copying aiogram.Dispatcher handler wrappers"
 
 from collections import defaultdict
 
@@ -30,7 +30,11 @@ class BaseGatherer:
 
         def decorator(callback):
             self.handlers["callback_query_handler"].append(
-                callback, custom_filters, dict(state=state, run_task=run_task, **kwargs)
+                (
+                    callback,
+                    custom_filters,
+                    dict(state=state, run_task=run_task, **kwargs),
+                )
             )
             return callback
 
@@ -61,16 +65,18 @@ class BaseGatherer:
 
         def decorator(callback):
             self.handlers["channel_post_handler"].append(
-                callback,
-                custom_filters,
-                dict(
-                    commands=commands,
-                    regexp=regexp,
-                    content_types=content_types,
-                    state=state,
-                    run_task=run_task,
-                    **kwargs
-                ),
+                (
+                    callback,
+                    custom_filters,
+                    dict(
+                        commands=commands,
+                        regexp=regexp,
+                        content_types=content_types,
+                        state=state,
+                        run_task=run_task,
+                        **kwargs
+                    ),
+                )
             )
             return callback
 
@@ -94,7 +100,7 @@ class BaseGatherer:
 
         def decorator(callback):
             self.handlers["chat_join_request_handler"].append(
-                callback, custom_filters, dict(run_task=run_task, **kwargs)
+                (callback, custom_filters, dict(run_task=run_task, **kwargs))
             )
             return callback
 
@@ -118,7 +124,7 @@ class BaseGatherer:
 
         def decorator(callback):
             self.handlers["chat_member_handler"].append(
-                callback, custom_filters, dict(run_task=run_task, **kwargs)
+                (callback, custom_filters, dict(run_task=run_task, **kwargs))
             )
             return callback
 
@@ -146,7 +152,11 @@ class BaseGatherer:
 
         def decorator(callback):
             self.handlers["chosen_inline_handler"].append(
-                callback, custom_filters, dict(state=state, run_task=run_task, **kwargs)
+                (
+                    callback,
+                    custom_filters,
+                    dict(state=state, run_task=run_task, **kwargs),
+                )
             )
             return callback
 
@@ -177,16 +187,18 @@ class BaseGatherer:
 
         def decorator(callback):
             self.handlers["edited_channel_post_handler"].append(
-                callback,
-                custom_filters,
-                dict(
-                    commands=commands,
-                    regexp=regexp,
-                    content_types=content_types,
-                    state=state,
-                    run_task=run_task,
-                    **kwargs
-                ),
+                (
+                    callback,
+                    custom_filters,
+                    dict(
+                        commands=commands,
+                        regexp=regexp,
+                        content_types=content_types,
+                        state=state,
+                        run_task=run_task,
+                        **kwargs
+                    ),
+                )
             )
             return callback
 
@@ -225,16 +237,18 @@ class BaseGatherer:
 
         def decorator(callback):
             self.handlers["edited_message_handler"].append(
-                callback,
-                custom_filters,
-                dict(
-                    commands=commands,
-                    regexp=regexp,
-                    content_types=content_types,
-                    state=state,
-                    run_task=run_task,
-                    **kwargs
-                ),
+                (
+                    callback,
+                    custom_filters,
+                    dict(
+                        commands=commands,
+                        regexp=regexp,
+                        content_types=content_types,
+                        state=state,
+                        run_task=run_task,
+                        **kwargs
+                    ),
+                )
             )
             return callback
 
@@ -251,9 +265,11 @@ class BaseGatherer:
 
         def decorator(callback):
             self.handlers["errors_handler"].append(
-                callback,
-                custom_filters,
-                dict(exception=exception, run_task=run_task, **kwargs),
+                (
+                    callback,
+                    custom_filters,
+                    dict(exception=exception, run_task=run_task, **kwargs),
+                )
             )
             return callback
 
@@ -279,7 +295,11 @@ class BaseGatherer:
 
         def decorator(callback):
             self.handlers["inline_handler"].append(
-                callback, custom_filters, dict(state=state, run_task=run_task, **kwargs)
+                (
+                    callback,
+                    custom_filters,
+                    dict(state=state, run_task=run_task, **kwargs),
+                )
             )
             return callback
 
@@ -366,16 +386,18 @@ class BaseGatherer:
 
         def decorator(callback):
             self.handlers["message_handler"].append(
-                callback,
-                custom_filters,
-                dict(
-                    commands=commands,
-                    regexp=regexp,
-                    content_types=content_types,
-                    state=state,
-                    run_task=run_task,
-                    **kwargs
-                ),
+                (
+                    callback,
+                    custom_filters,
+                    dict(
+                        commands=commands,
+                        regexp=regexp,
+                        content_types=content_types,
+                        state=state,
+                        run_task=run_task,
+                        **kwargs
+                    ),
+                )
             )
             return callback
 
@@ -399,7 +421,7 @@ class BaseGatherer:
 
         def decorator(callback):
             self.handlers["my_chat_member_handler"].append(
-                callback, custom_filters, dict(run_task=run_task, **kwargs)
+                (callback, custom_filters, dict(run_task=run_task, **kwargs))
             )
             return callback
 
@@ -423,7 +445,7 @@ class BaseGatherer:
 
         def decorator(callback):
             self.handlers["poll_answer_handler"].append(
-                callback, custom_filters, dict(run_task=run_task, **kwargs)
+                (callback, custom_filters, dict(run_task=run_task, **kwargs))
             )
             return callback
 
@@ -447,7 +469,7 @@ class BaseGatherer:
 
         def decorator(callback):
             self.handlers["poll_handler"].append(
-                callback, custom_filters, dict(run_task=run_task, **kwargs)
+                (callback, custom_filters, dict(run_task=run_task, **kwargs))
             )
             return callback
 
@@ -474,7 +496,11 @@ class BaseGatherer:
 
         def decorator(callback):
             self.handlers["pre_checkout_query_handler"].append(
-                callback, custom_filters, dict(state=state, run_task=run_task, **kwargs)
+                (
+                    callback,
+                    custom_filters,
+                    dict(state=state, run_task=run_task, **kwargs),
+                )
             )
             return callback
 
@@ -501,7 +527,11 @@ class BaseGatherer:
 
         def decorator(callback):
             self.handlers["shipping_query_handler"].append(
-                callback, custom_filters, dict(state=state, run_task=run_task, **kwargs)
+                (
+                    callback,
+                    custom_filters,
+                    dict(state=state, run_task=run_task, **kwargs),
+                )
             )
             return callback
 
