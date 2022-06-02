@@ -66,7 +66,7 @@ def main():
                         c.write(line)
 
                 with c.new_block("def decorator(callback):"):
-                    with c.new_block(f'self.handlers["{attr}"].append(', ")"):
+                    with c.new_block(f'self.handlers["{attr}"].append((', "))"):
                         c.write(f"callback, {args}, {kwargs}")
                     c.write("return callback")
                 c.write("return decorator")
