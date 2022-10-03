@@ -59,8 +59,13 @@ async def main():
         await session.close()
 
 
-if __name__ == '__main__':
+def cli():
+    """Wrapper for command line"""
     try:
         asyncio.run(main())
     except (KeyboardInterrupt, SystemExit):
         logger.error("Bot stopped!")
+
+
+if __name__ == '__main__':
+    cli()
