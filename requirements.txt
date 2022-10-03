@@ -1,3 +1,6 @@
+aiohttp[speedups]
 aiogram
+uvloop
+ujson
 aioredis
 black

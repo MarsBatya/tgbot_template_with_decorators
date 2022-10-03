@@ -1,2 +1,3 @@
 *.pyc
 bot.ini
+src/tgbot.egg-info
